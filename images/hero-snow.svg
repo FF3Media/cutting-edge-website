@@ -1,0 +1,157 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="winterSkyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="snowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8F8F8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0E0E0;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="snowShadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+
+    <filter id="houseLights">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+
+    <filter id="snowflakeShadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.2"/>
+    </filter>
+
+    <!-- Snowflake pattern -->
+    <g id="snowflake">
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="white" stroke-width="1"/>
+      <line x1="-10" y1="0" x2="10" y2="0" stroke="white" stroke-width="1"/>
+      <line x1="-7" y1="-7" x2="7" y2="7" stroke="white" stroke-width="1"/>
+      <line x1="-7" y1="7" x2="7" y2="-7" stroke="white" stroke-width="1"/>
+    </g>
+  </defs>
+
+  <!-- Winter sky background -->
+  <rect width="1200" height="600" fill="url(#winterSkyGradient)"/>
+
+  <!-- Falling snowflakes - background layer -->
+  <use href="#snowflake" x="100" y="80" r="4" filter="url(#snowflakeShadow)" opacity="0.4"/>
+  <use href="#snowflake" x="300" y="120" r="3" filter="url(#snowflakeShadow)" opacity="0.35"/>
+  <use href="#snowflake" x="500" y="100" r="4" filter="url(#snowflakeShadow)" opacity="0.4"/>
+  <use href="#snowflake" x="700" y="150" r="3" filter="url(#snowflakeShadow)" opacity="0.35"/>
+  <use href="#snowflake" x="900" y="90" r="4" filter="url(#snowflakeShadow)" opacity="0.4"/>
+  <use href="#snowflake" x="1100" y="140" r="3" filter="url(#snowflakeShadow)" opacity="0.35"/>
+
+  <!-- Foreground snowflakes -->
+  <use href="#snowflake" x="150" y="250" r="4" filter="url(#snowflakeShadow)" opacity="0.6"/>
+  <use href="#snowflake" x="400" y="300" r="4" filter="url(#snowflakeShadow)" opacity="0.55"/>
+  <use href="#snowflake" x="650" y="280" r="4" filter="url(#snowflakeShadow)" opacity="0.6"/>
+  <use href="#snowflake" x="950" y="320" r="4" filter="url(#snowflakeShadow)" opacity="0.55"/>
+  <use href="#snowflake" x="1050" y="250" r="4" filter="url(#snowflakeShadow)" opacity="0.6"/>
+  <use href="#snowflake" x="250" y="420" r="3" filter="url(#snowflakeShadow)" opacity="0.5"/>
+  <use href="#snowflake" x="800" y="450" r="3" filter="url(#snowflakeShadow)" opacity="0.5"/>
+
+  <!-- Pine trees in background (left) -->
+  <g opacity="0.6">
+    <polygon points="80,350 60,420 100,420" fill="#1a4d2e"/>
+    <polygon points="80,330 50,400 110,400" fill="#2d6a4f"/>
+    <polygon points="80,310 40,380 120,380" fill="#1a4d2e"/>
+    <rect x="75" y="420" width="10" height="40" fill="#5a4a3a"/>
+  </g>
+
+  <g opacity="0.65">
+    <polygon points="140,360 120,430 160,430" fill="#1a4d2e"/>
+    <polygon points="140,340 110,410 170,410" fill="#2d6a4f"/>
+    <polygon points="140,320 100,390 180,390" fill="#1a4d2e"/>
+    <rect x="135" y="430" width="10" height="35" fill="#5a4a3a"/>
+  </g>
+
+  <!-- Pine trees in background (right) -->
+  <g opacity="0.6">
+    <polygon points="1120,360 1100,430 1140,430" fill="#1a4d2e"/>
+    <polygon points="1120,340 1090,410 1150,410" fill="#2d6a4f"/>
+    <polygon points="1120,320 1080,390 1160,390" fill="#1a4d2e"/>
+    <rect x="1115" y="430" width="10" height="35" fill="#5a4a3a"/>
+  </g>
+
+  <!-- Snow ground layer -->
+  <rect x="0" y="400" width="1200" height="200" fill="url(#snowGradient)" filter="url(#snowShadow)"/>
+
+  <!-- Snow drift shadows -->
+  <ellipse cx="200" cy="450" rx="150" ry="40" fill="#D0D0D0" opacity="0.6"/>
+  <ellipse cx="1000" cy="480" rx="180" ry="50" fill="#D0D0D0" opacity="0.5"/>
+
+  <!-- Cleared driveway -->
+  <rect x="450" y="380" width="300" height="180" fill="#7A7A7A" filter="url(#snowShadow)"/>
+  <rect x="460" y="390" width="280" height="160" fill="#8B8B8B"/>
+
+  <!-- Snow banks on sides of driveway -->
+  <polygon points="450,400 420,390 420,560 450,560" fill="#F0F0F0" filter="url(#snowShadow)"/>
+  <polygon points="750,400 780,390 780,560 750,560" fill="#F0F0F0" filter="url(#snowShadow)"/>
+
+  <!-- Driveway edge highlights -->
+  <line x1="450" y1="380" x2="450" y2="560" stroke="#6A6A6A" stroke-width="2" opacity="0.7"/>
+  <line x1="750" y1="380" x2="750" y2="560" stroke="#6A6A6A" stroke-width="2" opacity="0.7"/>
+
+  <!-- Cleared walkway to house -->
+  <polygon points="580,380 540,300 620,300 580,380" fill="#8B8B8B" filter="url(#snowShadow)"/>
+  <polygon points="590,385 550,305 630,305 590,385" fill="#9B9B9B"/>
+
+  <!-- House structure -->
+  <g filter="url(#snowShadow)">
+    <!-- Main walls -->
+    <rect x="500" y="200" width="280" height="200" fill="#E8D4B8"/>
+
+    <!-- Roof with snow -->
+    <polygon points="500,200 640,100 780,200" fill="#2D2D2D"/>
+    <polygon points="500,200 640,100 780,200" fill="#1A1A1A" opacity="0.5"/>
+    <!-- Snow on roof -->
+    <polygon points="520,200 640,120 760,200" fill="white" opacity="0.7"/>
+
+    <!-- Door -->
+    <rect x="640" y="310" width="35" height="90" fill="#654321"/>
+    <circle cx="670" cy="355" r="2.5" fill="#FFD700"/>
+
+    <!-- Left windows with warm light -->
+    <rect x="525" y="220" width="40" height="40" fill="#FFA500" filter="url(#houseLights)"/>
+    <line x1="545" y1="220" x2="545" y2="260" stroke="#333" stroke-width="0.5" opacity="0.3"/>
+    <line x1="525" y1="240" x2="565" y2="240" stroke="#333" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Right windows with warm light -->
+    <rect x="735" y="220" width="40" height="40" fill="#FFA500" filter="url(#houseLights)"/>
+    <line x1="755" y1="220" x2="755" y2="260" stroke="#333" stroke-width="0.5" opacity="0.3"/>
+    <line x1="735" y1="240" x2="775" y2="240" stroke="#333" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Upper windows -->
+    <rect x="580" y="160" width="30" height="30" fill="#87CEEB" opacity="0.5"/>
+    <rect x="710" y="160" width="30" height="30" fill="#87CEEB" opacity="0.5"/>
+  </g>
+
+  <!-- Warm light glow from windows -->
+  <circle cx="545" cy="240" r="25" fill="#FFA500" opacity="0.1"/>
+  <circle cx="755" cy="240" r="25" fill="#FFA500" opacity="0.1"/>
+
+  <!-- Chimney -->
+  <rect x="655" y="90" width="20" height="110" fill="#8B4513" filter="url(#snowShadow)"/>
+  <rect x="655" y="80" width="20" height="15" fill="#A0522D"/>
+
+  <!-- Smoke wisps -->
+  <circle cx="665" cy="70" r="8" fill="white" opacity="0.3"/>
+  <circle cx="668" cy="55" r="7" fill="white" opacity="0.25"/>
+  <circle cx="662" cy="40" r="6" fill="white" opacity="0.2"/>
+
+  <!-- Snow on evergreen trees in the middle distance -->
+  <g opacity="0.8">
+    <polygon points="200,380 175,430 225,430" fill="#2d6a4f"/>
+    <polygon points="200,360 170,420 230,420" fill="#2d6a4f"/>
+    <polygon points="200,340 165,410 235,410" fill="#1a4d2e"/>
+    <!-- Snow caps on tree -->
+    <polygon points="200,365 180,400 220,400" fill="white" opacity="0.5"/>
+  </g>
+
+  <!-- More falling snowflakes in foreground -->
+  <use href="#snowflake" x="350" y="350" r="3.5" filter="url(#snowflakeShadow)" opacity="0.7"/>
+  <use href="#snowflake" x="750" y="380" r="3.5" filter="url(#snowflakeShadow)" opacity="0.7"/>
+  <use href="#snowflake" x="580" y="320" r="3" filter="url(#snowflakeShadow)" opacity="0.65"/>
+</svg>

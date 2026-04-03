@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none">
+  <defs>
+    <!-- Grass texture lines -->
+    <clipPath id="leaf1clip">
+      <path d="M160 140 C160 140, 145 90, 155 50 C158 40, 165 35, 170 40 C180 50, 185 80, 185 100 C185 115, 178 130, 165 140Z"/>
+    </clipPath>
+    <clipPath id="leaf2clip">
+      <path d="M175 135 C175 135, 185 75, 210 40 C215 33, 222 32, 225 38 C232 52, 228 90, 220 115 C215 128, 200 138, 185 140Z"/>
+    </clipPath>
+    <clipPath id="leaf3clip">
+      <path d="M195 140 C195 140, 225 80, 260 55 C267 50, 273 52, 274 58 C278 75, 265 110, 248 130 C238 140, 218 145, 205 142Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Leaf 1 - Dark Green (left, smallest) -->
+  <path d="M160 140 C160 140, 145 90, 155 50 C158 40, 165 35, 170 40 C180 50, 185 80, 185 100 C185 115, 178 130, 165 140Z" fill="#1a5c2a"/>
+  <!-- Grass texture on leaf 1 -->
+  <g clip-path="url(#leaf1clip)" stroke="#ffffff" stroke-width="0.6" opacity="0.3">
+    <line x1="158" y1="135" x2="160" y2="55"/>
+    <line x1="162" y1="138" x2="163" y2="58"/>
+    <line x1="166" y1="139" x2="166" y2="50"/>
+    <line x1="170" y1="140" x2="169" y2="48"/>
+    <line x1="174" y1="138" x2="173" y2="52"/>
+    <line x1="178" y1="135" x2="177" y2="60"/>
+    <line x1="182" y1="130" x2="181" y2="72"/>
+  </g>
+
+  <!-- Leaf 2 - Bright Green (middle) -->
+  <path d="M175 135 C175 135, 185 75, 210 40 C215 33, 222 32, 225 38 C232 52, 228 90, 220 115 C215 128, 200 138, 185 140Z" fill="#5cb839"/>
+  <!-- Grass texture on leaf 2 -->
+  <g clip-path="url(#leaf2clip)" stroke="#ffffff" stroke-width="0.6" opacity="0.3">
+    <line x1="183" y1="135" x2="195" y2="45"/>
+    <line x1="187" y1="137" x2="199" y2="42"/>
+    <line x1="191" y1="138" x2="203" y2="40"/>
+    <line x1="195" y1="139" x2="207" y2="39"/>
+    <line x1="199" y1="139" x2="211" y2="40"/>
+    <line x1="203" y1="138" x2="215" y2="43"/>
+    <line x1="207" y1="137" x2="219" y2="48"/>
+    <line x1="211" y1="134" x2="222" y2="55"/>
+    <line x1="215" y1="130" x2="224" y2="63"/>
+  </g>
+  <!-- Grass blades sprouting from top of leaf 2 -->
+  <g stroke="#5cb839" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M198 42 C196 28, 192 18, 190 8"/>
+    <path d="M203 38 C202 25, 200 15, 197 4"/>
+    <path d="M208 36 C208 22, 208 12, 206 2"/>
+    <path d="M213 37 C214 23, 216 13, 216 3"/>
+    <path d="M218 40 C220 27, 224 17, 226 7"/>
+    <path d="M222 45 C225 32, 230 22, 234 14"/>
+  </g>
+  <g stroke="#3a9926" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <path d="M200 40 C198 30, 195 20, 194 10"/>
+    <path d="M205 37 C205 26, 204 16, 202 6"/>
+    <path d="M210 36 C211 24, 213 14, 212 4"/>
+    <path d="M215 38 C217 26, 220 16, 222 8"/>
+    <path d="M220 42 C223 30, 228 20, 232 12"/>
+  </g>
+
+  <!-- Leaf 3 - Brown (right, largest) -->
+  <path d="M195 140 C195 140, 225 80, 260 55 C267 50, 273 52, 274 58 C278 75, 265 110, 248 130 C238 140, 218 145, 205 142Z" fill="#8B6914"/>
+  <!-- Texture on brown leaf -->
+  <g clip-path="url(#leaf3clip)" stroke="#ffffff" stroke-width="0.6" opacity="0.25">
+    <line x1="205" y1="140" x2="235" y2="60"/>
+    <line x1="209" y1="141" x2="239" y2="58"/>
+    <line x1="213" y1="142" x2="243" y2="57"/>
+    <line x1="217" y1="142" x2="248" y2="57"/>
+    <line x1="221" y1="142" x2="253" y2="58"/>
+    <line x1="225" y1="141" x2="257" y2="60"/>
+    <line x1="229" y1="140" x2="260" y2="63"/>
+    <line x1="233" y1="139" x2="263" y2="67"/>
+    <line x1="237" y1="137" x2="265" y2="72"/>
+    <line x1="241" y1="135" x2="268" y2="78"/>
+    <line x1="245" y1="133" x2="270" y2="84"/>
+  </g>
+  <!-- Central vein on brown leaf -->
+  <path d="M205 141 C220 115, 245 85, 267 58" stroke="#6d5210" stroke-width="1.2" fill="none" opacity="0.5"/>
+
+  <!-- Text: CUTTING EDGE -->
+  <text x="200" y="200" text-anchor="middle" font-family="'Inter', 'Arial', sans-serif" font-weight="800" font-size="52" letter-spacing="2">
+    <tspan fill="#1a5c2a">CUTTING </tspan><tspan fill="#5cb839">EDGE</tspan>
+  </text>
+
+  <!-- Text: LANDSCAPING -->
+  <text x="200" y="240" text-anchor="middle" font-family="'Inter', 'Arial', sans-serif" font-weight="600" font-size="28" letter-spacing="8" fill="#8B6914">LANDSCAPING</text>
+</svg>

@@ -1,0 +1,129 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="lawnGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+
+    <filter id="houseShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="1200" height="600" fill="url(#skyGradient)"/>
+
+  <!-- Clouds -->
+  <ellipse cx="200" cy="80" rx="80" ry="35" fill="white" opacity="0.7"/>
+  <ellipse cx="250" cy="100" rx="100" ry="40" fill="white" opacity="0.6"/>
+  <ellipse cx="900" cy="120" rx="90" ry="35" fill="white" opacity="0.65"/>
+  <ellipse cx="950" cy="140" rx="110" ry="45" fill="white" opacity="0.55"/>
+
+  <!-- Back trees -->
+  <g opacity="0.7">
+    <ellipse cx="150" cy="250" rx="70" ry="100" fill="#166534"/>
+    <rect x="120" y="320" width="60" height="80" fill="#8B7355"/>
+  </g>
+
+  <g opacity="0.75">
+    <ellipse cx="1050" cy="270" rx="75" ry="105" fill="#166534"/>
+    <rect x="1015" y="340" width="70" height="90" fill="#8B7355"/>
+  </g>
+
+  <!-- Main lawn striped pattern -->
+  <rect x="0" y="280" width="1200" height="320" fill="url(#lawnGradient)"/>
+
+  <!-- Lawn stripe details -->
+  <line x1="0" y1="280" x2="1200" y2="280" stroke="#1a5f2d" stroke-width="2" opacity="0.3"/>
+  <line x1="0" y1="300" x2="1200" y2="300" stroke="#22c55e" stroke-width="15" opacity="0.4"/>
+  <line x1="0" y1="320" x2="1200" y2="320" stroke="#1a5f2d" stroke-width="15" opacity="0.5"/>
+  <line x1="0" y1="340" x2="1200" y2="340" stroke="#22c55e" stroke-width="15" opacity="0.4"/>
+  <line x1="0" y1="360" x2="1200" y2="360" stroke="#1a5f2d" stroke-width="15" opacity="0.5"/>
+  <line x1="0" y1="380" x2="1200" y2="380" stroke="#22c55e" stroke-width="15" opacity="0.4"/>
+  <line x1="0" y1="400" x2="1200" y2="400" stroke="#1a5f2d" stroke-width="15" opacity="0.5"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#22c55e" stroke-width="15" opacity="0.4"/>
+  <line x1="0" y1="440" x2="1200" y2="440" stroke="#1a5f2d" stroke-width="15" opacity="0.5"/>
+  <line x1="0" y1="460" x2="1200" y2="460" stroke="#22c55e" stroke-width="15" opacity="0.4"/>
+  <line x1="0" y1="480" x2="1200" y2="480" stroke="#1a5f2d" stroke-width="15" opacity="0.5"/>
+  <line x1="0" y1="500" x2="1200" y2="500" stroke="#22c55e" stroke-width="15" opacity="0.4"/>
+  <line x1="0" y1="520" x2="1200" y2="520" stroke="#1a5f2d" stroke-width="15" opacity="0.5"/>
+  <line x1="0" y1="540" x2="1200" y2="540" stroke="#22c55e" stroke-width="15" opacity="0.4"/>
+  <line x1="0" y1="560" x2="1200" y2="560" stroke="#1a5f2d" stroke-width="15" opacity="0.5"/>
+  <line x1="0" y1="580" x2="1200" y2="580" stroke="#22c55e" stroke-width="15" opacity="0.4"/>
+
+  <!-- Driveway -->
+  <rect x="480" y="380" width="240" height="220" fill="#D3D3D3" filter="url(#shadow)"/>
+  <rect x="490" y="390" width="220" height="200" fill="#E8E8E8"/>
+
+  <!-- Driveway edge lines -->
+  <line x1="480" y1="380" x2="480" y2="600" stroke="#15803d" stroke-width="3" opacity="0.8"/>
+  <line x1="720" y1="380" x2="720" y2="600" stroke="#15803d" stroke-width="3" opacity="0.8"/>
+
+  <!-- Left landscape bed -->
+  <path d="M 50 380 Q 80 360 120 380 L 120 400 Q 80 380 50 400 Z" fill="#86efac"/>
+  <path d="M 60 385 Q 85 370 115 385 L 115 395 Q 85 375 60 395 Z" fill="#22c55e"/>
+
+  <!-- Shrubs -->
+  <g filter="url(#shadow)">
+    <ellipse cx="150" cy="370" rx="25" ry="35" fill="#166534"/>
+    <ellipse cx="170" cy="365" rx="22" ry="32" fill="#1a5f2d"/>
+    <ellipse cx="185" cy="375" rx="20" ry="30" fill="#166534"/>
+  </g>
+
+  <!-- Right landscape bed -->
+  <g filter="url(#shadow)">
+    <ellipse cx="1000" cy="375" rx="30" ry="40" fill="#166534"/>
+    <ellipse cx="1030" cy="370" rx="28" ry="38" fill="#1a5f2d"/>
+    <ellipse cx="1055" cy="380" rx="25" ry="35" fill="#166534"/>
+  </g>
+
+  <!-- House structure -->
+  <g filter="url(#houseShadow)">
+    <!-- Main walls -->
+    <rect x="580" y="150" width="320" height="230" fill="#D2B48C"/>
+
+    <!-- Roof -->
+    <polygon points="580,150 740,50 900,150" fill="#8B4513"/>
+    <polygon points="580,150 740,50 900,150" fill="#A0522D" opacity="0.6"/>
+
+    <!-- Left side shadow -->
+    <polygon points="580,150 580,380 740,380 740,50" fill="#000000" opacity="0.08"/>
+
+    <!-- Door -->
+    <rect x="720" y="280" width="40" height="100" fill="#654321" filter="url(#shadow)"/>
+    <circle cx="755" cy="330" r="3" fill="#FFD700"/>
+
+    <!-- Windows -->
+    <rect x="610" y="180" width="45" height="45" fill="#87CEEB" filter="url(#shadow)"/>
+    <line x1="632.5" y1="180" x2="632.5" y2="225" stroke="#333" stroke-width="1" opacity="0.5"/>
+    <line x1="610" y1="202.5" x2="655" y2="202.5" stroke="#333" stroke-width="1" opacity="0.5"/>
+
+    <rect x="730" y="180" width="45" height="45" fill="#87CEEB" filter="url(#shadow)"/>
+    <line x1="752.5" y1="180" x2="752.5" y2="225" stroke="#333" stroke-width="1" opacity="0.5"/>
+    <line x1="730" y1="202.5" x2="775" y2="202.5" stroke="#333" stroke-width="1" opacity="0.5"/>
+
+    <rect x="850" y="180" width="45" height="45" fill="#87CEEB" filter="url(#shadow)"/>
+    <line x1="872.5" y1="180" x2="872.5" y2="225" stroke="#333" stroke-width="1" opacity="0.5"/>
+    <line x1="850" y1="202.5" x2="895" y2="202.5" stroke="#333" stroke-width="1" opacity="0.5"/>
+
+    <!-- Garage door windows -->
+    <rect x="610" y="280" width="40" height="40" fill="#87CEEB" opacity="0.6" filter="url(#shadow)"/>
+    <rect x="665" y="280" width="40" height="40" fill="#87CEEB" opacity="0.6" filter="url(#shadow)"/>
+  </g>
+
+  <!-- Sun rays (optional accent) -->
+  <g opacity="0.1">
+    <line x1="1100" y1="0" x2="1100" y2="150" stroke="#FFD700" stroke-width="8"/>
+    <line x1="1150" y1="30" x2="1150" y2="180" stroke="#FFD700" stroke-width="8"/>
+    <line x1="1050" y1="30" x2="1050" y2="180" stroke="#FFD700" stroke-width="8"/>
+  </g>
+</svg>

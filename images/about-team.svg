@@ -1,0 +1,124 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="teamSkyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="teamLawnGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="personShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+
+    <filter id="truckShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="600" height="400" fill="url(#teamSkyGradient)"/>
+
+  <!-- Background trees -->
+  <g opacity="0.6">
+    <ellipse cx="80" cy="180" rx="50" ry="80" fill="#166534"/>
+    <rect x="60" y="260" width="40" height="80" fill="#8B7355"/>
+  </g>
+
+  <g opacity="0.65">
+    <ellipse cx="520" cy="190" rx="55" ry="85" fill="#166534"/>
+    <rect x="495" y="275" width="50" height="85" fill="#8B7355"/>
+  </g>
+
+  <!-- Ground/lawn -->
+  <rect x="0" y="280" width="600" height="120" fill="url(#teamLawnGradient)"/>
+
+  <!-- Person in branded green shirt -->
+  <g filter="url(#personShadow)">
+    <!-- Head -->
+    <circle cx="180" cy="140" r="25" fill="#D2A679"/>
+
+    <!-- Hair -->
+    <path d="M 155 125 Q 155 110 180 110 Q 205 110 205 125" fill="#3D2817"/>
+
+    <!-- Body - Green branded shirt -->
+    <rect x="155" y="165" width="50" height="70" fill="#15803d" rx="5"/>
+    <path d="M 155 165 Q 155 160 180 165 Q 205 160 205 165" fill="#1a5f2d"/>
+
+    <!-- Shirt details/logo area -->
+    <circle cx="180" cy="185" r="6" fill="#22c55e" opacity="0.6"/>
+
+    <!-- Arms -->
+    <ellipse cx="130" cy="190" rx="15" ry="40" fill="#D2A679" transform="rotate(-30 130 190)"/>
+    <ellipse cx="230" cy="190" rx="15" ry="40" fill="#D2A679" transform="rotate(30 230 190)"/>
+
+    <!-- Hands -->
+    <circle cx="110" cy="230" r="10" fill="#D2A679"/>
+    <circle cx="250" cy="230" r="10" fill="#D2A679"/>
+
+    <!-- Pants -->
+    <rect x="160" y="235" width="20" height="50" fill="#333"/>
+    <rect x="180" y="235" width="20" height="50" fill="#1a1a1a"/>
+
+    <!-- Work boots -->
+    <ellipse cx="170" cy="290" rx="12" ry="8" fill="#3D2817"/>
+    <ellipse cx="190" cy="290" rx="12" ry="8" fill="#3D2817"/>
+  </g>
+
+  <!-- Lawn mower held by person -->
+  <g filter="url(#personShadow)" transform="translate(260, 240) rotate(-15)">
+    <!-- Mower deck -->
+    <rect x="0" y="0" width="100" height="45" rx="5" fill="#DC143C"/>
+    <rect x="5" y="5" width="90" height="35" fill="#E63946"/>
+
+    <!-- Handle -->
+    <line x1="20" y1="0" x2="20" y2="-40" stroke="#333" stroke-width="4"/>
+    <line x1="80" y1="0" x2="80" y2="-40" stroke="#333" stroke-width="4"/>
+
+    <!-- Wheels -->
+    <circle cx="25" cy="45" r="12" fill="#1a1a1a"/>
+    <circle cx="75" cy="45" r="12" fill="#1a1a1a"/>
+  </g>
+
+  <!-- Truck in background/side -->
+  <g filter="url(#truckShadow)" opacity="0.9" transform="translate(350, 200)">
+    <!-- Cab -->
+    <rect x="0" y="0" width="60" height="45" fill="#15803d"/>
+    <rect x="5" y="5" width="50" height="35" fill="#22c55e"/>
+
+    <!-- Bed -->
+    <rect x="60" y="10" width="70" height="35" fill="#8B7355"/>
+
+    <!-- Wheels -->
+    <circle cx="20" cy="45" r="10" fill="#1a1a1a"/>
+    <circle cx="110" cy="45" r="10" fill="#1a1a1a"/>
+
+    <!-- Windows -->
+    <rect x="10" y="10" width="18" height="15" fill="#87CEEB" opacity="0.6"/>
+    <rect x="35" y="10" width="18" height="15" fill="#87CEEB" opacity="0.6"/>
+
+    <!-- Door handle -->
+    <circle cx="50" cy="28" r="2" fill="#FFD700"/>
+
+    <!-- Company marking on side -->
+    <text x="65" y="32" font-size="8" fill="#15803d" font-weight="bold" opacity="0.7">CEL</text>
+  </g>
+
+  <!-- Clouds for depth -->
+  <ellipse cx="100" cy="80" rx="45" ry="20" fill="white" opacity="0.5"/>
+  <ellipse cx="140" cy="95" rx="40" ry="18" fill="white" opacity="0.45"/>
+
+  <ellipse cx="450" cy="100" rx="50" ry="22" fill="white" opacity="0.5"/>
+  <ellipse cx="500" cy="115" rx="45" ry="20" fill="white" opacity="0.45"/>
+
+  <!-- Decorative trust elements - subtle checkmark/badge hint -->
+  <circle cx="580" cy="50" r="25" fill="#15803d" opacity="0.1"/>
+  <polyline points="570,50 575,57 595,40" stroke="#15803d" stroke-width="2" fill="none" opacity="0.3"/>
+
+  <!-- Professional atmosphere - sun rays -->
+  <line x1="550" y1="30" x2="550" y2="0" stroke="#FFD700" stroke-width="2" opacity="0.15"/>
+  <line x1="520" y1="40" x2="500" y2="20" stroke="#FFD700" stroke-width="2" opacity="0.15"/>
+</svg>

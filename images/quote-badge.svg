@@ -1,0 +1,84 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="badgeInnerGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#86efac;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:0" />
+    </radialGradient>
+
+    <filter id="badgeShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity="0.3"/>
+    </filter>
+
+    <filter id="badgeGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+
+    <filter id="textShadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Outer ring - decorative border -->
+  <circle cx="100" cy="100" r="95" fill="#15803d" opacity="0.15" filter="url(#badgeShadow)"/>
+
+  <!-- Main circular badge background -->
+  <circle cx="100" cy="100" r="90" fill="url(#badgeGradient)" filter="url(#badgeShadow)"/>
+
+  <!-- Inner glow effect -->
+  <circle cx="100" cy="100" r="85" fill="url(#badgeInnerGlow)"/>
+
+  <!-- Decorative inner border -->
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#86efac" stroke-width="1" opacity="0.5"/>
+
+  <!-- Decorative ring pattern - stars -->
+  <g opacity="0.6" filter="url(#badgeGlow)">
+    <!-- Top star -->
+    <polygon points="100,25 105,35 116,35 107,42 111,52 100,46 89,52 93,42 84,35 95,35" fill="#FFD700"/>
+
+    <!-- Bottom left star -->
+    <polygon points="40,145 44,153 53,153 45,159 49,168 40,162 31,168 35,159 27,153 36,153" fill="#FFD700"/>
+
+    <!-- Bottom right star -->
+    <polygon points="160,145 164,153 173,153 165,159 169,168 160,162 151,168 155,159 147,153 156,153" fill="#FFD700"/>
+  </g>
+
+  <!-- Decorative elements - small crescents -->
+  <path d="M 155 80 Q 165 85 160 95" fill="none" stroke="#86efac" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 155 120 Q 165 115 160 105" fill="none" stroke="#86efac" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 45 80 Q 35 85 40 95" fill="none" stroke="#86efac" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 45 120 Q 35 115 40 105" fill="none" stroke="#86efac" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Centered elements -->
+  <!-- Main text - FREE QUOTE -->
+  <g filter="url(#textShadow)">
+    <text x="100" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1">FREE</text>
+    <text x="100" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1">QUOTE</text>
+  </g>
+
+  <!-- Decorative checkmark below text -->
+  <g opacity="0.95">
+    <polyline points="85,125 92,133 107,120" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#badgeGlow)"/>
+  </g>
+
+  <!-- Subtle pattern - dots around edge -->
+  <circle cx="100" cy="30" r="2" fill="white" opacity="0.4"/>
+  <circle cx="150" cy="50" r="2" fill="white" opacity="0.4"/>
+  <circle cx="170" cy="100" r="2" fill="white" opacity="0.4"/>
+  <circle cx="150" cy="150" r="2" fill="white" opacity="0.4"/>
+  <circle cx="100" cy="170" r="2" fill="white" opacity="0.4"/>
+  <circle cx="50" cy="150" r="2" fill="white" opacity="0.4"/>
+  <circle cx="30" cy="100" r="2" fill="white" opacity="0.4"/>
+  <circle cx="50" cy="50" r="2" fill="white" opacity="0.4"/>
+
+  <!-- Outer decorative ring with dashes -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="white" stroke-width="0.5" stroke-dasharray="3,2" opacity="0.3"/>
+
+  <!-- Trust/Professional accent - ribbon-like detail at bottom -->
+  <path d="M 70 155 L 100 165 L 130 155" fill="#86efac" opacity="0.2"/>
+  <path d="M 75 158 L 100 165 L 125 158" fill="none" stroke="#15803d" stroke-width="1" opacity="0.3"/>
+</svg>
