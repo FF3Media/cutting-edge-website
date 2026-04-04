@@ -152,7 +152,9 @@
             <h2 class="text-2xl font-bold text-gray-900 mb-2">Request Your Free Quote</h2>
             <p class="text-gray-500">Takes 60 seconds. We'll follow up the same day for Kanata properties.</p>
           </div>
-          <form class="quote-form space-y-6" action="#" method="POST">
+          <form class="quote-form space-y-6" name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/success">
+            <input type="hidden" name="form-name" value="quote-request">
+            <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
             <div class="grid sm:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="block text-sm font-semibold text-gray-700 mb-1.5">Full Name <span class="text-red-500">*</span></label>
