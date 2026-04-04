@@ -450,24 +450,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  var heroForm = document.getElementById('hero-quote-form');
-  if (heroForm) {
-    heroForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var btn = heroForm.querySelector('button[type="submit"]');
-      btn.textContent = 'Request Sent!';
-      btn.classList.remove('bg-brand-700', 'hover:bg-brand-800');
-      btn.classList.add('bg-green-600');
-      btn.disabled = true;
-      setTimeout(function() {
-        btn.textContent = 'Book Now for 2026';
-        btn.classList.add('bg-brand-700', 'hover:bg-brand-800');
-        btn.classList.remove('bg-green-600');
-        btn.disabled = false;
-        heroForm.reset();
-      }, 3000);
-    });
-  }
+  // Hero form submission handled by FormSubmit.co via form action attribute
 
   // ==========================================
   // Phone number click tracking (GA ready)
