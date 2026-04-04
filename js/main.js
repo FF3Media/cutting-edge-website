@@ -227,14 +227,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ==========================================
-  // Quote Form Handling — submits to Netlify, shows in-page confirmation
-  // =====================================================================
+  // Quote Form Handling — client-side validation only
+  // FormSubmit.co handles the actual POST and email delivery
+  // =========================================================
   const quoteForms = document.querySelectorAll('.quote-form');
   quoteForms.forEach(function(form) {
     form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Validate required fields
       const required = form.querySelectorAll('[required]');
       let valid = true;
       required.forEach(function(field) {
@@ -245,35 +243,13 @@ document.addEventListener('DOMContentLoaded', function() {
           field.classList.remove('border-red-500', 'ring-2', 'ring-red-500');
         }
       });
-      if (!valid) return;
+      if (!valid) { e.preventDefault(); return; }
 
       const submitBtn = form.querySelector('button[type="submit"]');
       if (submitBtn) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
       }
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString()
-      }).then(function() {
-        // Hide the form fields, show success message
-        Array.from(form.children).forEach(function(child) {
-          if (!child.id || child.id !== 'hero-success') child.style.display = 'none';
-        });
-        var successMsg = form.querySelector('.form-success');
-        if (successMsg) {
-          successMsg.style.display = 'block';
-          successMsg.classList.remove('hidden');
-          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }).catch(function() {
-        if (submitBtn) {
-          submitBtn.textContent = 'Get a Free Quote';
-          submitBtn.disabled = false;
-        }
-      });
     });
   });
 

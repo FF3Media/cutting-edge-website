@@ -152,9 +152,11 @@
             <h2 class="text-2xl font-bold text-gray-900 mb-2">Request Your Free Quote</h2>
             <p class="text-gray-500">Takes 60 seconds. We'll follow up the same day for Kanata properties.</p>
           </div>
-          <form class="quote-form space-y-6" id="contact-quote-form" name="quote-request" method="POST" netlify netlify-honeypot="bot-field" action="/contact/success">
-            <input type="hidden" name="form-name" value="quote-request">
-            <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <form class="quote-form space-y-6" id="contact-quote-form" method="POST" action="https://formsubmit.co/info@cuttingedgekanata.ca">
+            <input type="hidden" name="_subject" value="New Quote Request - Cutting Edge Landscaping">
+            <input type="hidden" name="_next" value="https://cuttingedgekanata.ca/contact/success">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
             <div class="grid sm:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="block text-sm font-semibold text-gray-700 mb-1.5">Full Name <span class="text-red-500">*</span></label>
