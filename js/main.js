@@ -227,18 +227,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ==========================================
-  // Quote Form Handling with Better Validation
-  // ==========================================
+  // Quote Form Handling — submits to Netlify, shows in-page confirmation
+  // =====================================================================
   const quoteForms = document.querySelectorAll('.quote-form');
   quoteForms.forEach(function(form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-
-      const formData = new FormData(form);
-      const data = {};
-      formData.forEach(function(value, key) {
-        data[key] = value;
-      });
 
       // Validate required fields
       const required = form.querySelectorAll('[required]');
@@ -251,52 +245,35 @@ document.addEventListener('DOMContentLoaded', function() {
           field.classList.remove('border-red-500', 'ring-2', 'ring-red-500');
         }
       });
-
       if (!valid) return;
 
-      // Show success message
-      const successMsg = form.querySelector('.form-success');
       const submitBtn = form.querySelector('button[type="submit"]');
-
       if (submitBtn) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
       }
 
-      // Simulate form submission (replace with actual endpoint)
-      setTimeout(function() {
-        if (successMsg) {
-          successMsg.classList.remove('hidden');
-          successMsg.style.animation = 'slideInDown 0.3s ease-out';
-        }
-        if (submitBtn) {
-          submitBtn.textContent = 'Sent!';
-          submitBtn.classList.add('bg-green-500');
-        }
-        form.reset();
-
-        // Clear error states
-        required.forEach(function(field) {
-          field.classList.remove('border-red-500', 'ring-2', 'ring-red-500');
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function() {
+        // Hide the form fields, show success message
+        Array.from(form.children).forEach(function(child) {
+          if (!child.id || child.id !== 'hero-success') child.style.display = 'none';
         });
-
-        setTimeout(function() {
-          if (successMsg) {
-            successMsg.classList.add('hidden');
-          }
-          if (submitBtn) {
-            submitBtn.textContent = 'Send Request';
-            submitBtn.disabled = false;
-            submitBtn.classList.remove('bg-green-500');
-          }
-        }, 3000);
-      }, 1000);
-
-      // TODO: Replace with actual form submission endpoint
-      // fetch('/api/quote', { method: 'POST', body: JSON.stringify(data) })
-      //   .then(response => response.json())
-      //   .then(result => { /* handle success */ })
-      //   .catch(error => { /* handle error */ });
+        var successMsg = form.querySelector('.form-success');
+        if (successMsg) {
+          successMsg.style.display = 'block';
+          successMsg.classList.remove('hidden');
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }).catch(function() {
+        if (submitBtn) {
+          submitBtn.textContent = 'Get a Free Quote';
+          submitBtn.disabled = false;
+        }
+      });
     });
   });
 
