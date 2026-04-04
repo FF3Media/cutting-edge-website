@@ -6,19 +6,126 @@
   <title>Quote Request Sent - Cutting Edge Landscaping</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#22c55e',600:'#16a34a',700:'#15803d',800:'#166534',900:'#14532d'}},fontFamily:{sans:['Inter','system-ui','-apple-system','sans-serif']}}}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
 </head>
-<body class="font-sans bg-gray-50 min-h-screen flex items-center justify-center px-4">
-  <div class="max-w-md w-full text-center">
-    <div class="bg-white rounded-2xl shadow-lg p-10 border border-gray-100">
-      <div class="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-6">
-        <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-      </div>
-      <h1 class="text-2xl font-bold text-gray-900 mb-3">Your Quote Request Has Been Sent!</h1>
-      <p class="text-gray-500 mb-2">Thanks for reaching out to Cutting Edge Landscaping.</p>
-      <p class="text-gray-500 mb-8">Please allow <strong class="text-gray-700">one business day</strong> for a response — though we typically get back to Kanata homeowners the same day.</p>
-      <a href="/" class="inline-block bg-brand-700 hover:bg-brand-800 text-white font-bold px-8 py-3 rounded-xl transition">Back to Home</a>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- Canadian Flag Bar -->
+  <div class="bg-white text-center py-1.5 text-sm font-semibold text-gray-700 border-b border-gray-100">
+    <span class="inline-flex items-center gap-1.5">
+      <img src="https://flagcdn.com/w20/ca.png" width="20" height="10" alt="Canadian flag" class="inline-block">
+      Canadian Owned and Operated
+    </span>
+  </div>
+
+  <!-- Top Bar -->
+  <div class="bg-brand-800 text-white text-sm py-2 hidden md:block">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <span>Kanata's Local Lawn Care &amp; Landscaping Team</span>
+      <a href="mailto:info@cuttingedgekanata.ca" class="hover:text-brand-200">info@cuttingedgekanata.ca</a>
     </div>
   </div>
+
+  <!-- Simple Nav -->
+  <nav class="bg-white border-b border-gray-100 py-4">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <a href="/" class="flex items-center">
+        <img src="../../images/logo-full.png" alt="Cutting Edge Landscaping" class="h-14 w-auto">
+      </a>
+      <a href="/" class="text-brand-700 hover:text-brand-800 font-semibold text-sm">Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Success Content -->
+  <section class="min-h-[70vh] flex items-center justify-center px-4 py-20" style="background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #f0fdf4 100%);">
+    <div class="max-w-lg w-full text-center">
+
+      <!-- Animated checkmark -->
+      <div class="mb-8">
+        <div class="w-24 h-24 bg-brand-100 rounded-full flex items-center justify-center mx-auto shadow-lg shadow-brand-200/50" style="animation: scaleIn 0.5s ease-out;">
+          <svg class="w-12 h-12 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="animation: drawCheck 0.6s ease-out 0.3s both;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your Quote Request Has Been Sent!</h1>
+      <p class="text-gray-500 text-lg mb-10 max-w-md mx-auto">Thanks for reaching out to Cutting Edge Landscaping. Please allow <strong class="text-gray-700">one business day</strong> for a response — though we typically get back to Kanata homeowners the same day.</p>
+
+      <!-- What Happens Next -->
+      <div class="bg-white rounded-2xl shadow-md border border-gray-100 p-8 mb-10 text-left">
+        <h2 class="text-lg font-bold text-gray-900 mb-6 text-center">What Happens Next</h2>
+        <div class="space-y-6">
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-800 font-bold text-sm">1</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">We Review Your Request</p>
+              <p class="text-sm text-gray-500 mt-0.5">Musa will personally review your property details and service needs.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-800 font-bold text-sm">2</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">You'll Get a Custom Quote</p>
+              <p class="text-sm text-gray-500 mt-0.5">We'll send you a clear, honest quote — no hidden fees, no surprises.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-800 font-bold text-sm">3</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">We Get to Work</p>
+              <p class="text-sm text-gray-500 mt-0.5">Approve your quote and we'll schedule your first visit right away.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="inline-flex items-center justify-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold px-8 py-4 rounded-xl transition shadow-md">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+          Back to Home
+        </a>
+        <a href="tel:+16137006377" class="inline-flex items-center justify-center gap-2 bg-white border-2 border-brand-700 text-brand-700 hover:bg-brand-50 font-bold px-8 py-4 rounded-xl transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          Call (613) 700-6377
+        </a>
+      </div>
+
+      <!-- Trust badge -->
+      <p class="text-sm text-gray-400 mt-10 flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+        Your information is secure and will never be shared.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+    <p>&copy; 2026 Cutting Edge Landscaping. All rights reserved.</p>
+    <p class="mt-2">Kanata, Ontario, Canada</p>
+  </footer>
+
+  <style>
+    @keyframes scaleIn {
+      0% { transform: scale(0); opacity: 0; }
+      60% { transform: scale(1.15); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes drawCheck {
+      0% { stroke-dasharray: 30; stroke-dashoffset: 30; opacity: 0; }
+      100% { stroke-dasharray: 30; stroke-dashoffset: 0; opacity: 1; }
+    }
+  </style>
 </body>
 </html>
