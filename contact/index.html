@@ -152,7 +152,7 @@
             <h2 class="text-2xl font-bold text-gray-900 mb-2">Request Your Free Quote</h2>
             <p class="text-gray-500">Takes 60 seconds. We'll follow up the same day for Kanata properties.</p>
           </div>
-          <form class="quote-form space-y-6" id="contact-quote-form" name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/success">
+          <form class="quote-form space-y-6" id="contact-quote-form" name="quote-request" method="POST" netlify netlify-honeypot="bot-field" action="/contact/success">
             <input type="hidden" name="form-name" value="quote-request">
             <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
             <div class="grid sm:grid-cols-2 gap-6">
@@ -223,7 +223,7 @@
               <p class="text-xs text-gray-400 mt-3 text-center">No obligation. We'll never share your information.</p>
             </div>
 
-            <div id="contact-success" class="hidden bg-brand-50 border border-brand-200 text-brand-800 rounded-xl p-6 text-center">
+            <div id="contact-success" class="form-success hidden bg-brand-50 border border-brand-200 text-brand-800 rounded-xl p-6 text-center">
               <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
               </div>
@@ -387,19 +387,5 @@
   </div>
 
   <script src="../js/main.js"></script>
-  <script>
-    const form = document.getElementById('contact-quote-form');
-    const success = document.getElementById('contact-success');
-    if (form) {
-      form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const data = new FormData(form);
-        await fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() });
-        form.style.display = 'none';
-        success.classList.remove('hidden');
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-    }
-  </script>
 </body>
 </html>
